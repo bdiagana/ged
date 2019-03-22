@@ -14,10 +14,10 @@
                 <attribute name="Main-Class" value="ihm.LancementApplication"/>
                 <attribute name="Class-Path" value="."/>
             </manifest>
-       <target name="doc" depends="init" description="generate documentation">
-            <javadoc sourcepath="${source.dir}" destdir="${doc.dir}"/>
-          </target>
+      
         </jar>
     </target>
-
+ 	<target name="doc" depends="init" description="generate documentation">
+            <javadoc sourcepath="${source.dir}" destdir="${doc.dir}"/>
+          </target>
 </project>
