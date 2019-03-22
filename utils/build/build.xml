@@ -6,8 +6,8 @@
     <property name="dir.buildfile" value="."/>
     <property name="dir.workspace" value="C:/Users/DSBQ5660/eclipse-workspace"/>
     <property name="dir.jarfile" value="${dir.buildfile}"/>
-	<property name="source.dir" value="C:/Users/admin/Desktop/ged/src/com/sdz/model/Word.java"/>
-	<property name="source.dir" value="C:/Users/admin/Desktop/ged/src/com/sdz/model/"/>
+	<property name="source.dir" value="src/"/>
+	<property name="doc.dir" value="utils/doc"/>
     <target name="create_run_jar">
         <jar destfile="${dir.jarfile}/test.jar" filesetmanifest="mergewithoutmain">
        
