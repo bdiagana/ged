@@ -3,7 +3,7 @@
     <!--this file was created by Eclipse Runnable JAR Export Wizard-->
     <!--ANT 1.7 is required                                        -->
     <!--define folder properties-->
-    <property name="dir.buildfile" value="."/>
+    <property name="dir.buildfile" value="utils/build/build.xml"/>
     <property name="dir.workspace" value="C:/Users/DSBQ5660/eclipse-workspace"/>
     <property name="dir.jarfile" value="${dir.buildfile}"/>
 	<property name="source.dir" value="src/"/>
