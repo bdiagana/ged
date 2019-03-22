@@ -6,13 +6,17 @@
     <property name="dir.buildfile" value="."/>
     <property name="dir.workspace" value="C:/Users/DSBQ5660/eclipse-workspace"/>
     <property name="dir.jarfile" value="${dir.buildfile}"/>
+	<property name="source.dir" value="C:/Users/admin/Desktop/ged/src/com/sdz/model/Word.java"/>
+	<property name="source.dir" value="C:/Users/admin/Desktop/ged/src/com/sdz/model/"/>
     <target name="create_run_jar">
         <jar destfile="${dir.jarfile}/test.jar" filesetmanifest="mergewithoutmain">
             <manifest>
                 <attribute name="Main-Class" value="ihm.LancementApplication"/>
                 <attribute name="Class-Path" value="."/>
             </manifest>
-       
+       <target name="doc" depends="init" description="generate documentation">
+            <javadoc sourcepath="${source.dir}" destdir="${doc.dir}"/>
+          </target>
         </jar>
     </target>
 
