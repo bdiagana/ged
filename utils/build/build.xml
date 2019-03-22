@@ -13,7 +13,5 @@
        
         </jar>
     </target>
-	<target name="doc" depends="create_run_jar" description="generate documentation">
-        <javadoc sourcepath="${source.dir}" destdir="${doc.dir}"/>
-    </target>
+	
 </project>
