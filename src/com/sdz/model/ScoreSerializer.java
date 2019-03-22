@@ -13,7 +13,12 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 import javax.swing.JOptionPane;
-
+/***
+*
+* @author victor
+*
+*
+*/
 public class ScoreSerializer{
 	private Score[] listeScore = new Score[10];
 	
