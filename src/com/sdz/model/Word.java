@@ -7,23 +7,31 @@ import java.io.IOException;
 import java.io.LineNumberReader;
 
 import javax.swing.JOptionPane;
-
+/***
+ * 
+ * @author quent
+ *
+ */
 public class Word{
 
 	private String word = "", secretWord = "";
 	private char[] tabChar;
 	private int error = 0;
 	private int nbreCoup = 0;
-
+	/***
+	* Constructor of an Word objet
+	*/
 	public Word(){
 		initWord();
 	}
-	
+	/***
+	* Selects a random word in the file word.txt
+	*/
 	public void initWord(){
 		
 		int i = (int)(Math.random() * 100000);
 		while(i > 336529){
-			 i /= 2;
+			i /= 2;
 		}
 		
 		try {
@@ -60,7 +68,12 @@ public class Word{
 		this.tabChar = this.secretWord.toCharArray();
 		this.error = 0;
 	}
-	
+	/***
+	* Check if the char is in secret word
+	* @param c
+	* 		character to check
+	* @return -1 if it doesn't exist in the word, 1 if it does 
+	*/
 	public int verifyWord(char c){
 		
 		boolean bok = false;
@@ -77,7 +90,12 @@ public class Word{
 		System.out.println("Mot secret = " + this.word);
 		return (bok == true) ? 1 : -1;
 	}
-	
+	/***
+	* Check if a list of character is in secret word
+	* @param tc
+	* 			array of characters
+	* @return -1 if it doesn't exist, 1 if it does 
+	*/
 	public int verifyWord(char[] tc){
 		
 		boolean bok = false;
@@ -99,7 +117,10 @@ public class Word{
 		
 		return (bok == true) ? 1 : -1;
 	}
-	
+	/***
+	* Check if the player found all the letters of the word
+	* @return true if the player found all the letters, false if not
+	*/
 	public boolean isFinished(){
 		
 		for(char c : this.tabChar){
@@ -108,24 +129,43 @@ public class Word{
 		}
 		return true;
 	}
-	
+	/***
+	* return the word
+	* @return the word
+	*/
 	public String getWord() {
 		return word;
 	}
 
+	/***
+	* return the secret word
+	* @return the secret word
+	*/
 	public String getSecretWord() {
 		return secretWord;
 	}
-	
+	/***
+	* return the number of error
+	* @return the number of error
+	*/
 	public int getNombreErreur(){
 		return this.error;
 	}
-	
+	/***
+	* set the number of error
+	*/
 	public void setNombreErreur(int nbre){
 		this.error = nbre;
 	}
-
+	/***
+	* return the number of attempt
+	* @return the number of attempt
+	*/
 	public int getNombreCoup() {
 		return nbreCoup;
 	}
 }
+
+	
+	
+	
